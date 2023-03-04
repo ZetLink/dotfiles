@@ -1,0 +1,55 @@
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "margin": "5",
+    "height": 32, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": ["clock", "custom/recording"],
+    "modules-right": ["tray","pulseaudio", "custom/space", "cpu", "memory", "battery"],
+    "tray": {
+        "icon-size": 12,
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%d.%m.%y ❘ %H:%M}",
+    },
+    "cpu": {
+        "format": "{usage}% CPU"
+    },
+    "memory": {
+        "format": "{}% RAM"
+    },
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "| {volume}% Vol  {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% Mic",
+        "format-source-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "battery":{
+        "states":{
+            "good": 100,
+            "warning": 40,
+            "critical": 10
+        },
+        "format": "{capacity}% BAT"
+    },
+    "custom/space":{
+        "format": "| "
+    },
+}

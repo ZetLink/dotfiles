@@ -1,0 +1,74 @@
+* {
+  font-family: RobotoMono Nerd Font,"Noto Sans", sans-serif;
+  font-size: 12px;
+  color: #dcd7ba;
+  font-weight: 500;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+button {
+  border-radius: 0;
+  transition: background-color 300ms ease-in-out;
+}
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#clock,
+.modules-right,
+.modules-left {
+  background-color: @theme_base_color;
+  border: 1px @theme_base_color;
+}
+
+#clock,
+.modules-center {
+  padding: 0 10px;
+}
+
+#memory {
+  padding: 0 0 0 10px;
+}
+
+#battery {
+  padding: 0 10px;
+}
+
+#battery.charging{
+  color: #4CA951;
+}
+
+#tray {
+  padding-left: 10px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#workspaces button.active {
+  background-color: #2a2a37;
+}
+
+#pulseaudio {
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+#custom-custom {
+  padding: 0 5px 0 5px;
+}
+
